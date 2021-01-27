@@ -1,0 +1,54 @@
+% Licensed under the Creative Commons Attribution Share Alike 4.0 International.
+% See the LICENCE file in the repository root for full licence text.
+
+\section{复数域}
+
+\begin{definition}{复数,复数集,虚数单位}
+	称集合 $\{x + y \mathrm i: x, y \in \R\}$ 为\emph{复数集}，记为 $\C$。其中 $\mathrm i$ 是一个符号，称为\emph{虚数单位}。复数集中的任一元素称为一个\emph{复数}。
+\end{definition}
+
+显然，$\C$ 中的任一元素 $x + y \mathrm i$ 与 $\R \times \R$ 中的元素 $(x, y)$ 一一对应。
+
+规定当 $y = 0$ 时，复数 $x + y \mathrm i$ 就是实数集中的元素 $x$，即：
+$$
+(x + 0 \mathrm i) = x \in \R
+$$
+所以实数集是复数集的真子集。
+
+当 $x = 0$ 且 $y \ne 0$ 时，复数 $x + y \mathrm i$ 可以简记为 $y \mathrm i$。特别地，当 $x = 0, y = 1$ 时，复数可以只记为 $\mathrm i$。
+
+\begin{definition}{实部,虚部}
+	设复数 $z = x + y \mathrm i$，则称 $x$ 为 $z$ 的\emph{实部}，记为 $\operatorname{Re} z$；称 $y$ 为 $z$ 的\emph{虚部}，记为 $\operatorname{Im} z$。
+\end{definition}
+
+定义了实部和虚部后，我们可以得到以下显然的定理。
+
+\begin{theorem}[复数相等]
+	复数 $z_1, z_2$ 相等的充分必要条件是它们的实部和虚部分别相等。
+\end{theorem}
+
+最后，让我们考察复数的运算。
+
+\begin{definition}{复数域}
+	定义加法：
+	$$
+	\begin{aligned}
+		{+} \colon & \C \times \C \to \C
+		\\&
+		(a_1 + b_1 \mathrm i, a_2 + b_2 \mathrm i) \mapsto (a_1 + a_2) + (b_1 + b_2) \mathrm i
+	\end{aligned}
+	$$
+
+	定义乘法：
+	$$
+	\begin{aligned}
+		{\times} \colon & \C \times \C \to \C
+		\\&
+		(a_1 + b_1 \mathrm i, a_2 + b_2 \mathrm i) \mapsto (a_1 a_2 - b_1 b_2) + (a_1 b_2 + a_2 b_1) \mathrm i
+	\end{aligned}
+	$$
+
+	则 $(\C, {+}, {\times})$ 是一个域，称之为\emph{复数域}。
+\end{definition}
+
+复数域的存在\footnote{有关域的概念超出了本书的讨论范围，这里我们直接给出了 $(\C, {+}, {\times})$ 是一个域的结论。}，为复数集注入了无限的活力。
