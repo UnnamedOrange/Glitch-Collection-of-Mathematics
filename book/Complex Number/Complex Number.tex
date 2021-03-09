@@ -125,3 +125,82 @@ $$
 \begin{definition}{复平面,实轴,虚轴}
 	若平面直角坐标系中的各点 $(x, y)$ 与复数 $x + y \mathrm i$ 一一对应，则称该平面为\emph{复平面}。复平面的 $x$ 轴称为\emph{实轴}，$y$ 轴称为\emph{虚轴}。
 \end{definition}
+
+平面直角坐标系中的点 $(x, y)$ 可以进行坐标变换。规定极坐标变换为：
+$$
+\begin{cases}
+	x = r \cos \theta
+	\\
+	y = r \sin \theta
+\end{cases}
+\pod{r > 0}
+$$
+
+所以可以用 $r$ 和 $\theta$ 表示一个复数，称为\emph{复数的极坐标表示}\index{复数的极坐标表示}：
+$$
+z = x + \mathrm i y = r (\cos \theta + \mathrm i \sin \theta) \pod{z \ne 0}
+$$
+
+特别地，规定复数 $0$ 也可使用极坐标表示。这时 $r = 0$，$\theta$ 取任意值。
+
+\begin{definition}{模,辐角}
+	设复数 $z$ 的极坐标表示为 $r (\cos \theta + \mathrm i \sin \theta)$，则称 $r$ 为复数 $z$ 的\emph{模}，记为 $|z|$；称 $\theta$ 为复数 $z$ 的\emph{辐角}，记为 $\arg z$。
+\end{definition}
+
+由三角函数的周期性可知，即使对于一个非零复数 $z$，其辐角 $\arg z$ 的可能取值也不唯一。所以上文中提到的\textbf{辐角需要理解为任一可行的取值}。为了在某些语境下消除歧义，我们引出以下概念。
+
+\begin{definition}{辐角的主值}
+	若 $\theta$ 是某非零复数 $z$ 的辐角的可行取值，且 $\theta \in (-\pi, \pi]$，则称 $\theta$ 为 $z$ 的\emph{辐角的主值}。
+\end{definition}
+
+\subsection{四则运算的几何意义}
+
+引入复数的极坐标表示后，便可以解释复数的四则运算在复平面上的意义。
+
+\begin{enumerate}
+	\item 复数加法的几何意义是二维向量相加。
+	\item 复数减法的几何意义是二维向量相减。
+	\item 复数乘法的几何意义是模相乘，辐角相加。
+	\item 复数除法的几何意义是模相除，辐角相减。
+\end{enumerate}
+
+\begin{proof}[只证明复数乘法的几何意义]
+	设复数 $a, b$ 的极坐标表示分别为：
+	$$
+	a = r_1 (\cos \theta_1 + \mathrm i \sin \theta_1)
+	$$$$
+	b = r_2 (\cos \theta_2 + \mathrm i \sin \theta_2)
+	$$
+
+	则有：
+	$$
+	\begin{aligned}
+		a \cdot b &= r_1 r_2 \bigl( \cos \theta_1 \cos \theta_2 - \sin \theta_1 \sin \theta_2 + \mathrm i (\cos \theta_1 \sin \theta_2 + \sin \theta_1 \cos \theta_2) \bigr)
+		\\&=
+		r_1 r_2 \bigl( \cos(\theta_1 + \theta_2) + \sin(\theta_1 + \theta_2) \bigr)
+	\end{aligned}
+	$$
+
+	即 $|a \cdot b| = r_1 r_2$，$\arg(a \cdot b) = \theta_1 + \theta_2$。证毕。
+\end{proof}
+
+\subsection{欧拉公式}
+
+我们不加证明地给出欧拉公式。注意，不可用泰勒展开进行证明，因为此时还没有给出泰勒展开定理，而泰勒展开定理的证明需要用到欧拉公式。
+
+\begin{theorem}[欧拉公式]
+	设 $\theta$ 是任意实数，则：
+	$$
+	\mathrm e^{\mathrm i \theta} = \cos \theta + \mathrm i \sin \theta
+	$$
+\end{theorem}
+
+为了方便，我们以欧拉公式本身作为纯虚数指数函数的定义。\footnote{参见 \url{https://zh.wikipedia.org/wiki/\%E6\%AC\%A7\%E6\%8B\%89\%E5\%85\%AC\%E5\%BC\%8F}。}可见，纯虚数指数函数满足：
+$$
+\mathrm e^{\mathrm i \theta_1} \cdot \mathrm e^{\mathrm i \theta_2} = \mathrm e^{\mathrm i (\theta_1 + \theta_2)}
+$$
+
+所以在极坐标变换下，可以引出\emph{复数的指数表示}\index{复数的指数表示}:
+$$
+z = r \mathrm e^{\mathrm i \theta}
+$$
