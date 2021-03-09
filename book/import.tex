@@ -39,7 +39,7 @@
 \newcommand \Q {\mathbb Q}
 \newcommand \R {\mathbb R}
 \newcommand \Z {\mathbb Z}
-\renewcommand \C {\mathbb C}
+\newcommand \C {\mathbb C}
 
 % index
 \newcommand \idx[1] {#1\index{#1}}
@@ -59,7 +59,7 @@
 	\noindent
 	\textbf{定义} \emph{#1}：%
 }
-{
+{%
 	\end{mdframed}
 }
 
@@ -73,7 +73,7 @@
 	\textbf{定理}
 	\ifthenelse{\isempty{#1}}{\stepcounter{cTheorem}\arabic{cTheorem}}{\emph{#1}\index{#1}}：%
 }
-{
+{%
 	\end{mdframed}
 }
 
@@ -85,7 +85,7 @@
 	{\noindent \textbf{证明}~{#1}}
 
 }
-{
+{%
 	\end{mdframed}
 }
 
@@ -97,6 +97,6 @@
 	{\noindent \textbf{解}~{#1}}
 
 }
-{
+{%
 	\end{mdframed}
 }
